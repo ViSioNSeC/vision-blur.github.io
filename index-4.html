@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Contacts</title>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="images/favicon.ico">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/stuck.css">
+<link rel="stylesheet" href="css/form.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.1.1.js"></script>
+<script src="js/script.js"></script>
+<script src="js/superfish.js"></script>
+<script src="js/jquery.equalheights.js"></script>
+<script src="js/jquery.mobilemenu.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/tmStickUp.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/TMForm.js"></script>
+<script src="js/jquery.ui.totop.js"></script>
+<script>
+ $(document).ready(function(){
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#stuck_container').tmStickUp({});
+});
+</script>
+<!--[if lt IE 9]>
+ <div style=' clear: both; text-align:center; position: relative;'>
+   <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+     <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+   </a>
+</div>
+<script src="js/html5shiv.js"></script>
+<link rel="stylesheet" media="screen" href="css/ie.css">
+<![endif]-->
+</head>
+<body id="top">
+<!--==============================
+              header
+=================================-->
+<header>
+<!--==============================
+            Stuck menu
+=================================-->
+  <section id="stuck_container">
+    <div class="container">
+      <div class="row">
+        <div class="grid_12">
+        <h1>
+          <a href="index.html">
+            <img src="images/logot.png" alt="Logo alt">
+          </a>
+        </h1>
+          <div class="navigation ">
+            <nav>
+              <ul class="sf-menu">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="index-1.html">Services</a></li>
+               <li class="current"><a href="index-4.html">Contacts</a></li>
+             </ul>
+            </nav>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
+<!--=====================
+          Content
+======================-->
+<section class="content">
+  <div class="container">
+    <div class="row">
+    <br> </br>
+      <div class="grid_6">
+        <div class="text1 tx__1">Contact Form</div>
+          <form id="form" >
+            <div class="form_spinner">
+              <img src="images/Preloader_4.gif" alt="">
+            </div>
+            <div class="modal fade response-message">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Modal title</h4>
+                  </div>
+                  <div class="modal-body">
+                    Question
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="response-error-message"></div>
+                <label class="name">
+                  <input type="text" name="name" placeholder="Name:" value="" data-constraints="@Required @JustLetters" />
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*This is not a valid name.</span>
+                </label>
+                <label class="email">
+                  <input type="text" name="email" placeholder="E-mail:" value="" data-constraints="@Required @Email" />
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*This is not a valid email.</span>
+                </label>
+                <label class="phone">
+                  <input type="text" name="phone" placeholder="Phone:" value="" data-constraints="@Required @JustNumbers"/>
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*This is not a valid phone.</span>
+                </label>
+                <label class="message">
+                  <textarea name="message" placeholder="Message:" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*The message is too short.</span>
+                </label>
+                <div class="clear"></div>
+                <div class="btns">
+                  <a href="#" data-type="reset" class="btn">clear</a>
+                  <a href="#" data-type="submit" class="btn">send</a>
+                </div>
+          </form>
+      </div>
+      <div class="grid_6">
+        <div class="text1 tx__1">Contact Information</div>
+        <p>We offer you 24/7 support for all vip!</p>
+        <p>If you need help in ideas of design ask here.</p>
+        <p>If you have any questions just ask!</p>
+        ViSioN BluR Inc. <br>
+        E-mail: <a href="#">visionblur2015@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!--==============================
+              footer
+=================================-->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="grid_12">
+        <div class="socials">
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-google-plus"></a>
+          <a href="#" class="fa fa-youtube-play"></a>
+        </div>
+        <div class="copyright"><span class="brand">ViSioN BluR</span> &copy; <span id="copyright-year"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

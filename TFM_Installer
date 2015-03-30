@@ -1,0 +1,35 @@
+#!/bin/sh
+ 
+echo ""
+echo "-----------------------------------"
+echo " Installing Flash Debugger"
+echo "-----------------------------------"
+
+wget -c http://fpdownload.macromedia.com/pub/flashplayer/updaters/11/flashplayer_11_sa_debug.i386.tar.gz
+tar xvzf flashplayer_11_sa_debug.i386.tar.gz
+rm flashplayer_11_sa_debug.i386.tar.gz
+ 
+# Copying to /usr/lib
+ 
+sudo mkdir -p /usr/lib/flashplayer
+sudo mv flashplayerdebugger /usr/lib/flashplayer/flashplayerdebugger
+ 
+# Adding symlinks
+ 
+sudo rm -rf /usr/bin/flashplayerdebugger
+sudo ln -s /usr/lib/flashplayer/flashplayerdebugger /usr/bin/flashplayerdebugger
+sudo ln -s /usr/bin/flashplayerdebugger /usr/bin/flashplayer
+
+# Creating TFM
+echo "#!/bin/sh
+flashplayer http://transformice.com/TransformiceChargeur.swf" > TFM
+chmod +x TFM
+rm /usr/bin/TFM
+mv TFM /usr/bin/TFM
+rm -rf LGPL
+rm TFM_Installer
+clear
+echo "|---------------------------|"
+echo "|To Start Transformice Type |"
+echo "|           TFM             |"
+echo "|---------------------------|"
